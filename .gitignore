@@ -5,3 +5,4 @@ logs/
 .venv
 .idea
 profiles.yml
+.user.yml
