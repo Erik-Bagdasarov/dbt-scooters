@@ -1,8 +1,8 @@
 version: 2
 
 models:
-  - name: 'trips_stat_daily'
-    description: 'Overall trips statistics per day'
+  - name: "trips_stat_daily"
+    description: "Overall trips statistics per day"
     config:
       indexes:
         - columns: [ "date" ]
@@ -10,15 +10,26 @@ models:
   - name: "trips_stat"
     description: "Overall trips statistics"
     config:
-      +materialized: "view"
+      materialized: "view"
 
   - name: "trips_prep"
     description: "Trips prepared for analysis"
     config:
-      +materialized: "view"
+      materialized: "view"
 
-  - name: 'trips_age_daily'
-    descroption: 'Daily trips statistics by users age'
+  - name: "trips_age_daily"
+    description: "Daily trips statistics by users age"
 
-  - name: 'trips_age_daily_stat'
-    descroption: 'Aggregation of daily trips statistics by user age'
+  - name: "trips_age_daily_stat"
+    description: "Aggregation of daily trips statistics by user age"
+    
+  - name: "trips_geom"
+    description: "Trips prepared for geometry analysis"
+    config:
+      materialized: "view"
+
+  - name: "parking_start_stat"
+    description: "Trip start parking statistics by 500 m hexagons"
+
+  - name: "parking_finish_stat"
+    description: "Trip finish parkibg statistics by 10 m hexagons"
