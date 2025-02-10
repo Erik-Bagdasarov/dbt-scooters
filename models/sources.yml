@@ -10,3 +10,6 @@ sources:
 
       - name: "users"
         description: "Users of scooter service"
+
+      - name: 'events'
+        description: 'Raw user events with duplicates'
