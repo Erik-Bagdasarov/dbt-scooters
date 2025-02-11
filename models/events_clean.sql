@@ -2,6 +2,7 @@ select
     distinct user_id
 ,   "timestamp"
 ,   type_id
+,   {{ updated_at() }}
 from {{ source('scooters_raw', 'events') }}
 where 1=1
     and {% if is_incremental() %}
