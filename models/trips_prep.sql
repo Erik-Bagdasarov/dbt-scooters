@@ -14,4 +14,4 @@ select
 ,   finished_at <> started_at and price = 0 as is_free
 ,   date(started_at) as "date"
 from
-    {{ source("scooters_raw", "trips") }}
+    {{ source('scooters_raw', 'trips') }}
