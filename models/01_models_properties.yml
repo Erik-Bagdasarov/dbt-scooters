@@ -43,6 +43,8 @@ models:
     description: "User evnets without duplicates"
     config:
       materialized: "incremental"
+      strategy: "merge"
+      unique_key: ["user_id", "timestamp", "type_id"]
 
   - name: "revenue_daily"
     description: "Summary daily revenue"
