@@ -40,3 +40,7 @@ create extension postgis schema public;
 ```
 
 Этот `README.md` файл кратко описывает ваш проект и предоставляет основные dbt команды для работы с ним. Надеюсь, это поможет вам в работе с вашим проектом!
+
+## Полезные макросы
+
+- `dbt run-operation create_role --args "name: finance"` - создание роли в базе (на примере роли "finance")
