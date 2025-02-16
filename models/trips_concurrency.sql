@@ -40,6 +40,7 @@ with unnest_cte as (
 select
     "timestamp"
 ,   concurrency
+,   {{ updated_at() }}
 from cumsum_cte
 where preserve_row
 order by 1

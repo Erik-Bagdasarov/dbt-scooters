@@ -43,15 +43,7 @@ models:
     description: "User evnets without duplicates"
     config:
       materialized: "incremental"
-
-  - name: "revenue_daily"
-    description: "Summary daily revenue"
-    config:
-      materialized: "incremental"
       strategy: "merge"
-      unique_key: [ "date" ]
-      on_schema_change: "append_new_columns"
-      full_refresh: false
 
   - name: "trips_concurrency"
     description: "Number of simultaneous rides in time"
@@ -61,7 +53,6 @@ models:
   - name: "companies"
     description: "Scooter statistics by company"
 
-  - name: "trips_companies"
     description: "Trip statistics by company"
 
   - name: "events_full"
