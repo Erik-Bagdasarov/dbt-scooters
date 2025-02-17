@@ -64,4 +64,4 @@ models:
     description: "Overall user event statistics"
 
   - name: "trips_age_group"
-    description: "Overall trips statistics by user age group"
+    description: "Overall trips statistics by user age-group"
