@@ -53,8 +53,6 @@ models:
   - name: "companies"
     description: "Scooter statistics by company"
 
-    description: "Trip statistics by company"
-
   - name: "events_full"
     description: "User events enriched with meaningful types"
     config:
@@ -64,4 +62,4 @@ models:
     description: "Overall user event statistics"
 
   - name: "trips_age_group"
-    description: "Overall trips statistics by user age-group"
+    description: "Overall trips statistics by user age group"
