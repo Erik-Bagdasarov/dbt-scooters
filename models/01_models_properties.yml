@@ -16,6 +16,9 @@ models:
     description: "Trips prepared for analysis"
     config:
       materialized: "view"
+    data_tests:
+      - row_count_equal:
+          compare_model: "source('scooters_raw', 'trips')"
 
   - name: "trips_age_daily"
     description: "Daily trips statistics by users age"
