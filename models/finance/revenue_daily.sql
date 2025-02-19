@@ -7,4 +7,4 @@ from {{ ref('trips_prep') }}
     where "date" >= (select max("date") - interval '2' day from {{ this }})
 {% endif %}
 group by 2,3
-order by 2
+order by 1
