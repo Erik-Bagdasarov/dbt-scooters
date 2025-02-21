@@ -93,3 +93,8 @@ models:
 
   - name: "metricflow_time_spine"
     description: "Time spine calendar for metricflow"
+
+  - name: "users_prep"
+    description: "User prepared for analysis without sensitive data"
+    config:
+      materialized: "view"
