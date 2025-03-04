@@ -1,3 +1,4 @@
 dbt-core==1.9.2
 dbt-postgres==1.9.0
 dbt-metricflow==0.8.0
+sqlfluff-templater-dbt==3.3.0
