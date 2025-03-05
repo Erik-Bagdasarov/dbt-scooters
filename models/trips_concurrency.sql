@@ -15,7 +15,7 @@ sum_cte as (
     from unnest_cte
     where
         {% if is_incremental() %}
-            timestamp > (select max(timestamp) from {{ this }})
+            "timestamp" > (select max("timestamp") from {{ this }})
         {% else %}
             "timestamp" < (date '2023-06-01' + interval '7' hour) at time zone 'Europe/Moscow'
         {% endif %}
@@ -27,7 +27,7 @@ sum_cte as (
             concurrency as increment,
             false as preserve_row
         from {{ this }}
-        where "timestamp" = (select max(timestamp) from {{ this }})
+        where "timestamp" = (select max("timestamp") from {{ this }})
     {% endif %}
 ),
 
