@@ -1,6 +1,6 @@
 with trips_cte as (
     select
-        company,
+        s.company,
         count(*) as trips
     from {{ ref('trips_prep') }} as t
     inner join {{ ref('scooters') }} as s on t.scooter_hw_id = s.hardware_id
