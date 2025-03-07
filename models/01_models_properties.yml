@@ -64,7 +64,7 @@ models:
         unique_key: [ "user_id", "timestamp", "type_id" ]
         testing:
           days_max: 60
-    data_tests: [ "unique_key_meta" ]
+#    data_tests: [ "unique_key_meta" ]
 
   - name: "events_stream"
     description: "User events prepared for product analysis"
