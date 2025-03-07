@@ -1,7 +1,7 @@
 [sqlfluff]
 dialect = postgres
 templater = dbt
-exclude_rules = ST07, RF04, LT05, LT12, LT01, LT02, LT04
+exclude_rules = ST07, ST06, RF04, LT05, LT12, LT01, LT02, LT04
 warnings = RF02, RF06
 
 [sqlfluff:templater:jinja]
